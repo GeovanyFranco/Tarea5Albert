@@ -65,7 +65,7 @@ function insertar() {
                     <li><a href="index.php">Home</a></li>
                     <li><a href="Alumnos.php">Alumnos</a></li>
                     <li><a href="TodosAlumnos.php">Alumnos por departamento</a></li>
-                    <li><a href="">Modificar alumno</a></li>
+                    <li><a href="ModificarAlumno.php">Modificar alumno</a></li>
                     <li><a href="NuevoAlumno.php">Nuevo alumno</a></li>
                     <li><a href="Departamentos.php">Nuevo departamentos</a></li>
                     <li><a href="EliminarAlumno.php">Eliminar alumno</a></li>
@@ -90,6 +90,13 @@ function insertar() {
             }
             ?>
         </section>
-        <footer>…</footer>
+        <footer>
+                <h2>Desarrollo web</h2>
+                <p>
+                    <strong>CARNET:</strong> 1390-12-18169<br>
+                    <strong>NOMBRE:</strong> Carolin Gabriela Cetino Sian<br>
+                    <strong>TAREA 5</strong>
+                </p>
+            </footer>
     </body>
 </html>
