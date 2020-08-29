@@ -2,12 +2,11 @@
 
 $server = 'localhost:3306';
 $username = 'root';
-$password = 'admin123$';
-$database = 'colegiodb';
+$password = '';
+$database = 'tarea5';
 
 try {
-  $conn =  mysqli_connect(
-                "localhost:3306","root","admin123$");
+  $conn =  mysqli_connect($server,$username,$password);
         
         if (!$conn) {
             exit('Connect Error (' . mysqli_connect_errno() . ') '
@@ -17,7 +16,7 @@ try {
         mysqli_set_charset($conn, 'utf-8');
 
         // estableciendo la BDD
-        mysqli_select_db($conn, "colegiodb");       
+        mysqli_select_db($conn, "$database");       
 } catch (PDOException $e) {
   die('Connection Failed: ' . $e->getMessage());
 }

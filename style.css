@@ -1,0 +1,175 @@
+html {background-color : #F0F0F0;}
+
+body {
+    width : 980px;
+    margin-left : auto;
+    margin-right : auto;
+    font-family : Gill Sans, sans-serif;
+    font-size : 1.2em;
+    color : #404040;
+    background-color : white;
+    padding : 10px;
+    padding-top : 0px;
+}
+
+a {
+    color : #3AA6D0;
+    text-decoration : none;
+}
+
+/* H TAGS */
+
+h1 {
+    font-size : 3em;
+    color : FF2C00;
+}
+
+h1.toptitle {
+    margin-bottom : 10px;
+}
+
+h2 {
+    font-size : 1.5em;
+    color : #FF8500;
+}
+
+h3 {
+    font-size : 1.2em;
+    color : #00B945;
+}
+
+/* ASIDE */
+
+aside {
+    float : left;
+    width : 320px;
+    margin-right: 20px;
+    margin-bottom : 15px;
+    background-color : #D0D0D0 ;
+    padding : 5px;
+    border : 1px solid #A8A8A8;
+}
+
+aside h1 {
+    font-size : 1.2em;
+    margin-top : 0px;
+}
+
+aside h2 {
+    font-size : 1em;
+}
+
+aside div {
+    padding : 5px;
+    background-color : #F0F0F0;
+    margin-bottom : 15px;
+}
+
+aside ul {
+    line-height : 1.8em;
+    list-style-type : square;
+    color : #FF8500;
+}
+header {
+    margin-bottom : 40px;
+}
+
+/* NAV */
+
+nav {
+    text-align : center;
+    margin-top : 0;
+}
+
+nav h1 {
+    display : none;
+}
+
+nav ul {
+    list-style-type : none;
+    margin : 0;
+    padding : 0;
+}
+
+nav li {
+    display : block;
+}
+
+nav a {
+    font-weight : bold;
+    color : #0776A0;
+}
+
+nav hr {
+    width : 300px;
+    margin-right : auto;
+    margin-left : auto;
+    background-color : #63DC90;
+    color : #63DC90;
+    height: 3px;
+    border:3px;
+}
+
+footer {
+    text-align : center;
+    font-size : 0.8em;
+    font-style : italic;
+
+}
+
+img.top-image {
+    height : 50px;
+    float : left;
+    margin-top : 10px;
+    margin-right : 30px;
+}
+
+.quote p {
+    font-style : italic;
+}
+
+ul.body-list{
+    list-style-position : inside;
+    list-style-type: none;
+    line-height : 1.8em;
+}
+section table{
+    text-align : center;
+    margin-left : auto;
+    margin-right : auto;
+}
+section th {
+    border: black solid 1px;
+    text-align : center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+section td {
+    border: black solid 1px;
+    text-align : center;
+    padding: 10px;
+}
+
+section .formulario {
+    border: Blue solid 2px;
+    background-color: buttonface;
+}
+section .formulario td{
+    border: none;
+    background-color: buttonface;
+    text-align: justify;
+}
+
+section .btn-enviar{
+    background-color: greenyellow;
+    border-bottom-style: solid;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left : 40%;
+}
+section .btn-limpiar{
+    background-color: dodgerblue;
+    border-bottom-style: solid;
+    font-size: 20px;
+}
