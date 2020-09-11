@@ -3,7 +3,7 @@
 $server = 'localhost:3306';
 $username = 'root';
 $password = '';
-$database = 'tarea5';
+$database = 'colegiodb';
 
 try {
   $conn =  mysqli_connect($server,$username,$password);
