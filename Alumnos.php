@@ -12,66 +12,51 @@ and open the template in the editor.
     </head>
     <body>
         <header>
-            <nav>
-                <h1>Menu de navegacion</h1>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="Alumnos.php">Alumnos</a></li>
-                    <li><a href="TodosAlumnos.php">Alumnos por departamento</a></li>
-                    <li><a href="ModificarAlumno.php">Modificar alumno</a></li>
-                    <li><a href="NuevoAlumno.php">Nuevo alumno</a></li>
-                    <li><a href="Departamentos.php">Nuevo departamentos</a></li>
-                    <li><a href="EliminarAlumno.php">Eliminar alumno</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section>
-            <?php
-            require './database.php';
-            $q = "SELECT codigo, nombre1, apellido1, telefono, email, DATE_FORMAT(fechanacimiento, '%d/%m/%Y') as fechanac FROM alumnos "
-                    . " order by codigo";
+            <?php require './menu.php'; ?>ul>
+        </nav>
+    </header>
+    <section>
+        <?php
+        require './database.php';
+        $q = "SELECT codigo, nombre1, apellido1, telefono, email, DATE_FORMAT(fechanacimiento, '%d/%m/%Y') as fechanac FROM alumnos "
+                . " order by codigo";
 
-            // echo $q;
-            // enviando el comando SQL
-            $alumnos = mysqli_query($conn, $q);
+        // echo $q;
+        // enviando el comando SQL
+        $alumnos = mysqli_query($conn, $q);
 
-            if (mysqli_num_rows($alumnos) < 1) {
-                echo "<br>No hay alumnos registrados para el departamento "
-                . htmlentities($_GET["listadeptos"]);
-                echo "<br>";
-            } else {
-                echo "<table>\n";
-                echo "<th>Codigo</th>\n";
-                echo "<th>Nombre</th>\n";
-                echo "<th>Apellido</th>\n";
-                echo "<th>Telefono</th>\n";
-                echo "<th>eMail</th>\n";
-                echo "<th>Fecha de Nacimiento</th>\n";
+        if (mysqli_num_rows($alumnos) < 1) {
+            echo "<br>No hay alumnos registrados para el departamento "
+            . htmlentities($_GET["listadeptos"]);
+            echo "<br>";
+        } else {
+            echo "<table>\n";
+            echo "<th>Codigo</th>\n";
+            echo "<th>Nombre</th>\n";
+            echo "<th>Apellido</th>\n";
+            echo "<th>Telefono</th>\n";
+            echo "<th>eMail</th>\n";
+            echo "<th>Fecha de Nacimiento</th>\n";
 
-                while ($row = mysqli_fetch_array($alumnos)) {
-                    echo "<tr>";
-                    echo "<td>" . $row['codigo'] . "</td>";
-                    echo "<td>" . $row['nombre1'] . "</td>";
-                    echo "<td>" . $row['apellido1'] . "</td>";
-                    echo "<td>" . $row['telefono'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['fechanac'] . "</td>";
-                    echo "</tr>";
-                }
-                echo '</table>';
-                // cerrando la conexion a la BDD
-                //mysqli_free_result($deptos);
-                mysqli_close($conn);
+            while ($row = mysqli_fetch_array($alumnos)) {
+                echo "<tr>";
+                echo "<td>" . $row['codigo'] . "</td>";
+                echo "<td>" . $row['nombre1'] . "</td>";
+                echo "<td>" . $row['apellido1'] . "</td>";
+                echo "<td>" . $row['telefono'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['fechanac'] . "</td>";
+                echo "</tr>";
             }
-            ?>
-        </section>
-        <footer>
-                <h2>Desarrollo web</h2>
-                <p>
-                    <strong>CARNET:</strong> 1390-12-18169<br>
-                    <strong>NOMBRE:</strong> Carolin Gabriela Cetino Sian<br>
-                    <strong>TAREA 5</strong>
-                </p>
-            </footer>
-    </body>
+            echo '</table>';
+            // cerrando la conexion a la BDD
+            //mysqli_free_result($deptos);
+            mysqli_close($conn);
+        }
+        ?>
+    </section>
+    <footer>
+        <?php require './Footer.php'; ?>
+    </footer>
+</body>
 </html>

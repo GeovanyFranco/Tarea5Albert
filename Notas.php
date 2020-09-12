@@ -15,31 +15,32 @@ and open the template in the editor.
             <?php require './menu.php'; ?>
         </header>
         <section>
-            <h2>Nuevo curso:</h2><br>
-            <form action="InsertCurso.php" method="post">
+            <h2>Ingresar notas de alumno:</h2><br>
+            <form action="InsertNotas.php" method="post">
                 <table class="formulario">
                     <tr>
-                        <td>Curso:</td>
-                        <td><input type="text" name="nombre" size="50" required></td>
+                        <td>Codigo de alumno:</td>
+                        <td><input type="number" name="id_alumno" size="50" required></td>
                     </tr>
                     <tr>
-                        <td>Creditos:</td>
-                        <td><input type="number" name="creditos" size="50" required></td>
+                        <td>Codigo de curso:</td>
+                        <td><input type="number" name="id_curso" size="50" required></td>
                     </tr>
                     <tr>
-                        <td>Nota minima:</td>
-                        <td><input type="number" name="notaminima" maxlength="8" size="20"></td>
+                        <td>Punteo:</td>
+                        <td><input type="text" name="punteo" size="50" required></td>
                     </tr>
                     <tr>
-                        <td>Profesor:</td>
-                        <td><input type="text" name="profesor" size="40" required><br></td>
+                        <td>Fecha de aprobacion:</td>
+                        <td><input type="date" name="date" size="50" required></td>
+                    </tr>
                 </table>
-                <input class="btn-enviar" type="submit" value="Grabar">
+                <input class="btn-enviar" type="submit" value="Siguiente">
                 <input class="btn-limpiar" type="reset" value="Limpiar">
             </form>
         </section>
         <footer>
-            <?php require './Footer.php'; ?>
+            <?php require './Footer.php'; ?>                
         </footer>
     </body>
 </html>

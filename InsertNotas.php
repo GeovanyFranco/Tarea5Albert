@@ -4,6 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php
+
+function insertNotas() {
+    require './database.php';
+    $insert = "INSERT INTO notas (codigoalumno ,codigocurso, nota, fechaaprobacion) "
+            . "VALUES (" . $_POST['id_alumno'] . "," . $_POST['id_curso'] . ", " . $_POST['punteo'] . ", '" . $_POST['date'] . "');";
+    echo '<br>' . $insert;
+    $s = mysqli_query($conn, $insert);
+    mysqli_close($conn);
+}
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -15,20 +26,14 @@ and open the template in the editor.
             <?php require './menu.php'; ?>
         </header>
         <section>
-            <h2>Eliminar alumno:</h2><br>
-            <form action="DeleteAlumno.php" method="POST">
-                <table class="formulario">
-                    <tr>
-                        <td>Codigo:</td>
-                        <td><input type="text" name="codigo" size="50" required></td>
-                    </tr>
-                </table>
-                <input class="btn-enviar" type="submit" value="Grabar">
-                <input class="btn-limpiar" type="reset" value="Limpiar">
-            </form>
+            <?php
+            insertNotas();
+            echo "<br><a href='Notas.php'>Ingresar otro</a>";
+            ?>
         </section>
         <footer>
             <?php require './Footer.php'; ?>
         </footer>
     </body>
 </html>
+

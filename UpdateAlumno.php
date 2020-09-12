@@ -34,7 +34,7 @@ function insertar() {
     //generando fecha en formato 'yyyy-mm-dd' para ser almacenada en la base de datos
     $fecha = $anio . "-" . $mes . "-" . $dia;
 
-     $q = "UPDATE alumnos SET "
+    $q = "UPDATE alumnos SET "
             . "nombre1='" . $_POST['nombre1'] . "', "
             . "apellido1='" . $_POST['apellido1'] . "', "
             . "telefono='" . $_POST['telefono'] . "', "
@@ -44,7 +44,7 @@ function insertar() {
             . "codigodepto='" . $_POST['CodDep'] . "' "
             . "WHERE codigo =" . $_POST['codigo'];
 
-    echo '<br>'.$q.'<br>';
+    echo '<br>' . $q . '<br>';
     $s = mysqli_query($conn, $q);
 
     //mysqli_free_result($s);
@@ -59,19 +59,7 @@ function insertar() {
     </head>
     <body>
         <header>
-            <nav>
-                <h1>Menu de navegacion</h1>
-                <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="Alumnos.php">Alumnos</a></li>
-                    <li><a href="TodosAlumnos.php">Alumnos por departamento</a></li>
-                    <li><a href="ModificarAlumno.php">Modificar alumno</a></li>
-                    <li><a href="NuevoAlumno.php">Nuevo alumno</a></li>
-                    <li><a href="Departamentos.php">Nuevo departamentos</a></li>
-                    <li><a href="EliminarAlumno.php">Eliminar alumno</a></li>
-                </ul>
-            </nav>
-
+            <?php require './menu.php'; ?>
         </header>
         <section>
             <?php
@@ -91,12 +79,7 @@ function insertar() {
             ?>
         </section>
         <footer>
-                <h2>Desarrollo web</h2>
-                <p>
-                    <strong>CARNET:</strong> 1390-12-18169<br>
-                    <strong>NOMBRE:</strong> Carolin Gabriela Cetino Sian<br>
-                    <strong>TAREA 5</strong>
-                </p>
-            </footer>
+            <?php require './Footer.php'; ?>
+        </footer>
     </body>
 </html>

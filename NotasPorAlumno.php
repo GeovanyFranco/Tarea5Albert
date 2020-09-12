@@ -15,20 +15,20 @@ and open the template in the editor.
             <?php require './menu.php'; ?>
         </header>
         <section>
-            <h2>Eliminar alumno:</h2><br>
-            <form action="DeleteAlumno.php" method="POST">
+            <h2>Nuevo Alumno:</h2><br>
+            <form action="ListaNotasAlumno.php" method="post">
                 <table class="formulario">
                     <tr>
-                        <td>Codigo:</td>
-                        <td><input type="text" name="codigo" size="50" required></td>
+                        <td>Codigo de alumno:</td>
+                        <td><input type="number" name="codigo" size="50" required></td>
                     </tr>
                 </table>
-                <input class="btn-enviar" type="submit" value="Grabar">
+                <input class="btn-enviar" type="submit" value="Siguiente">
                 <input class="btn-limpiar" type="reset" value="Limpiar">
             </form>
         </section>
         <footer>
-            <?php require './Footer.php'; ?>
+            <?php require './Footer.php'; ?>                
         </footer>
     </body>
 </html>

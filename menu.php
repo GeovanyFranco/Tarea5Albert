@@ -9,7 +9,7 @@
         <li><a href="Departamentos.php">Nuevo departamentos</a></li>
         <li><a href="EliminarAlumno.php">Eliminar alumno</a></li>
         <li><a href="NuevoCurso.php">Nuevo cursos</a></li>
-        <li><a href="">Ingresar notas</a></li>
-        <li><a href="">Notas por alumno</a></li>
+        <li><a href="Notas.php">Ingresar notas</a></li>
+        <li><a href="NotasPorAlumno.php">Notas por alumno</a></li>
     </ul>
 </nav>
